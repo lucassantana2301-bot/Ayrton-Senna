@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:ital,wght@0,700;0,800;0,900;1,800;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-inter: 'Inter', sans-serif;
+  --font-montserrat: 'Montserrat', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+body {
+  background-color: #0A0A0C;
+  color: #FFFFFF;
+  font-family: var(--font-inter);
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0D0D11;
+}
+::-webkit-scrollbar-thumb {
+  background: #FFE100;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #E6CA00;
+}
+
+/* Racing Glassmorphism & Card Styles */
+.glass-panel {
+  background: rgba(24, 24, 30, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.glass-panel-hover:hover {
+  background: rgba(28, 28, 36, 0.85);
+  border-color: rgba(255, 225, 0, 0.4);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px -10px rgba(255, 225, 0, 0.15);
+}
+
+/* Neon Glow Utilities */
+.glow-yellow {
+  box-shadow: 0 0 25px rgba(255, 225, 0, 0.35);
+}
+
+.glow-yellow-sm {
+  box-shadow: 0 0 12px rgba(255, 225, 0, 0.25);
+}
+
+.glow-text-yellow {
+  text-shadow: 0 0 20px rgba(255, 225, 0, 0.5);
+}
+
+.glow-green {
+  box-shadow: 0 0 25px rgba(0, 155, 58, 0.4);
+}
+
+.glow-blue {
+  box-shadow: 0 0 25px rgba(0, 39, 118, 0.5);
+}
+
+/* Senna Helmet Stripe Gradient */
+.senna-stripe-bg {
+  background: linear-gradient(135deg, #FFE100 0%, #FFE100 45%, #009B3A 45%, #009B3A 70%, #002776 70%, #002776 100%);
+}
+
+.senna-stripe-line {
+  background: linear-gradient(90deg, #FFE100 0%, #009B3A 50%, #002776 100%);
+}
+
+/* Racing Speed Grid Pattern */
+.racing-grid {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+}
+
+/* Skewed Badge Style (Lando Norris Inspired) */
+.skew-badge {
+  transform: skewX(-12deg);
+}
+.skew-badge > * {
+  transform: skewX(12deg);
+}
+
+/* Selection color */
+::selection {
+  background-color: #FFE100;
+  color: #0A0A0C;
+}
